@@ -1,0 +1,217 @@
+/* ====== RESET E CONFIGURAÇÃO GERAL ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #000000; /* fundo vinho */
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* ====== TOPO ====== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #030303;
+  font-weight: 500;
+}
+
+.menu a:hover,
+.menu a.ativo {
+  text-decoration: underline;
+}
+
+/* ====== SEÇÕES ====== */
+section {
+  padding: 60px 10%;
+}
+
+/* ===== CARROSSEL AUTOMÁTICO ===== */
+.carousel-auto {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  margin: 60px auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slideAnimation 12s infinite;
+}
+
+.slide {
+  flex: 1 0 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@keyframes slideAnimation {
+  0%   { transform: translateX(0); }
+  30%  { transform: translateX(0); }
+
+  33%  { transform: translateX(-100%); }
+  63%  { transform: translateX(-100%); }
+
+  66%  { transform: translateX(-200%); }
+  96%  { transform: translateX(-200%); }
+
+  100% { transform: translateX(0); }
+}
+
+/* ====== RODAPÉ ====== */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #000000;
+  margin-top: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.527);
+}
+body {
+  background-color: #faf7f3 !important;
+  color: rgb(11, 11, 11) !important;
+}
+
+/* deixa o título mais elegante */
+.home h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #2e2e2e  !important;
+  margin-bottom: 60px;
+
+}
+
+
+.carousel--scroll-markers {
+  scroll-marker-group: after;
+
+  &::scroll-marker-group {
+    position: fixed;
+    position-anchor: --carousel;
+    position-area: block-end;
+    position-visibility: always;
+    margin: 10px;
+
+    display: grid;
+    grid-auto-columns: 20px;
+    grid-auto-flow: column;
+    gap: 20px;
+  }
+
+  &::column::scroll-marker {
+    content: ' ';
+  }
+  &::column::scroll-marker:target-current {
+    background: var(--accent);
+  }
+}
+
+
+.carousel {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  anchor-name: --carousel;
+
+  columns: 1;
+  block-size: 10lh;
+  text-align: center;
+
+  &::column {
+    scroll-snap-align: center;
+  }
+}
+/* remove a barra de rolagem feia do carrossel */
+.carousel {
+  scrollbar-width: none; /* Firefox */
+}
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* leve sombra nas imagens pra dar destaque */
+.carousel_slide img {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* cor de fundo do header mais sutil e flutuante */
+header {
+  background-color: rgba(245, 242, 236, 0.9);
+  backdrop-filter: blur(4px);
+}
+/* ===== INDICADORES DO CARROSSEL (BOLINHAS) ===== */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 25px;
+  color: #333;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d6d3ce;
+  transition: background-color 0.3s;
+}
+
+.dot:hover {
+  background-color: #333;
+}/* Força as bolinhas a ficarem em linha */
+section.home .carousel-indicators {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  position: relative;
+  bottom: 0;
+}
+
+/* Estilo visual das bolinhas */
+section.home .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #d8d8d8;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+section.home .dot:hover {
+  background-color: #333;
+}

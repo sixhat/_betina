@@ -1,0 +1,340 @@
+/* ===== BASE GERAL ===== */
+body {
+  font-family: 'Times New Roman', serif;
+  background-color: #f5f1e9; /* bege claro */
+  color: #2b2b2b;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+nav a:hover,
+nav a.ativo {
+  text-decoration: underline;
+}
+
+/* ===== SEÇÃO COMO COMPRAR ===== */
+main.comprar {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+main.comprar h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #3c2c2c;
+}
+
+main.comprar p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== ETAPAS (BLOCOS) ===== */
+.etapas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* duas colunas no desktop */
+  justify-content: center;
+  gap: 30px;
+  padding: 0 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.etapa {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.etapa:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.etapa h3 {
+  color: #3c2c2c;
+  margin-bottom: 10px;
+}
+
+.etapa p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* ===== ANIMAÇÃO DE APARECIMENTO ===== */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplica a animação aos blocos */
+.etapa {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Faz cada bloco aparecer com leve atraso */
+.etapa:nth-child(1) { animation-delay: 0.1s; }
+.etapa:nth-child(2) { animation-delay: 0.3s; }
+.etapa:nth-child(3) { animation-delay: 0.5s; }
+.etapa:nth-child(4) { animation-delay: 0.7s; }
+
+/* Hover refinado */
+.etapa:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== TEXTO FINAL ===== */
+.informacoes {
+  text-align: center;
+  max-width: 800px;
+  margin: 60px auto 40px auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.informacoes strong {
+  color: #2b2b2b;
+}
+/* === Estilos gerais === */
+body {
+  font-family: "Georgia", serif;
+  background-color: #f9f6f2;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Cabeçalho === */
+header {
+  text-align: center;
+  padding: 30px 0 10px 0;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #7a3e3e;
+}
+
+/* === Seção principal === */
+section {
+  max-width: 1000px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+section h2 {
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #111;
+}
+
+section p {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* === Galeria de imagens === */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.foto {
+  text-align: center;
+}
+
+.foto img {
+  width: 230px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foto img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.foto p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* === Rodapé === */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+  padding: 40px 0;
+  border-top: 1px solid #ddd;
+}
+/* === Informações adicionais === */
+.info-adicionais {
+  max-width: 800px;
+  margin: 40px auto 60px auto;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.info-adicionais h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #222;
+}/* === Etapas (1, 2, 3, 4) === */
+.etapas {
+  display: flex;
+  flex-wrap: wrap; /* permite quebrar em telas menores */
+  justify-content: center;
+  gap: 25px;
+  margin: 50px auto;
+  max-width: 950px;
+}
+
+.etapa {
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  width: 200px; /* caixas menores */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.etapa:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.etapa h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.etapa p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #555;
+}/* === Etapas (ajuste final) === */
+.etapas {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 880px;
+  margin: 40px auto;
+}
+
+.etapa {
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  width: 190px;
+  padding: 18px 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.etapa:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.etapa h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.etapa p {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.4;
+}

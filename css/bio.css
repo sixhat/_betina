@@ -1,0 +1,119 @@
+/* === Estilos gerais === */
+body {
+  font-family: "Georgia", serif;
+  background-color: #f9f6f2;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Cabeçalho e navegação === */
+header {
+  text-align: center;
+  padding: 30px 0 10px 0;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: #7a3e3e;
+  font-weight: 600;
+}
+
+/* === BIO === */
+.bio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.bio-imagem img {
+  width: 320px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bio-texto {
+  max-width: 480px;
+}
+
+.bio-texto h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.bio-texto p {
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* === INFORMAÇÕES ADICIONAIS === */
+.info-extra {
+  text-align: center;
+  background-color: #f2efeb;
+  padding: 50px 25px;
+  border-top: 1px solid #ddd;
+  margin-top: 60px;
+}
+
+.info-extra h3 {
+  font-size: 1.3rem;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.info-extra p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+  color: #555;
+}
+
+.info-extra a {
+  color: #7a3e3e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.info-extra a:hover {
+  text-decoration: underline;
+}
+
+/* === Rodapé === */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+  padding: 40px 0;
+  border-top: 1px solid #ddd;
+}
