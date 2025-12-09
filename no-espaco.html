@@ -1,11 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>No Espaço — Realidade Aumentada</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/noespaco.css" />
+  </head>
+
+  <body>
+    <header class="topo">
+      <h1 class="logo">BM</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bio.html">Biografia</a></li>
+          <li><a href="como-comprar.html">Como comprar</a></li>
+          <li><a href="no-espaco.html" class="active">No espaço</a></li>
+          <li><a href="serie.html">Série</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="espaco-header">
+        <h2>No Espaço — Realidade Aumentada</h2>
+        <p>
+          Explore como as fotografias se integram aos ambientes.  
+          A tecnologia de Realidade Aumentada permite visualizar cada obra diretamente nas paredes do seu espaço.
+        </p>
+      </section>
+
+      <section class="espaco-gallery">
+        <div class="obra">
+          <img src="media/mockup1.jpg" alt="Obra em parede de sala" />
+          <p class="descricao">“Fragmentos da Cidade #2” — Fine Art Print</p>
+          <a href="media/fragmentos_cidade2.usdz" rel="ar" class="btn-ar">Ver em RA</a>
+        </div>
+
+        <div class="obra">
+          <img src="media/mockup2.jpg" alt="Obra em galeria minimalista" />
+          <p class="descricao">“Entre Natureza e Memória #1” — Fine Art Print</p>
+          <a href="media/natureza_memoria1.glb" rel="ar" class="btn-ar">Ver em RA</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2025 Betina Marinho — Fine Art Photography
+    </footer>
+  </body>
 </html>
