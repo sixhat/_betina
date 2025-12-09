@@ -1,0 +1,48 @@
+/* --- MENU DESKTOP --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+}
+
+.logo {
+  font-family: "Georgia", serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  color: #222;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  font-family: "Georgia", serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #222;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav a:hover {
+  color: #8b6f56;
+  border-bottom: 1px solid #8b6f56;
+}
+
+nav a.active {
+  color: #8b6f56;
+  border-bottom: 1px solid #8b6f56;
+}
+
+/* Ícone do menu escondido no desktop */
+.menu-toggle {
+  display: none;
+}

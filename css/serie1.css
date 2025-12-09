@@ -30,10 +30,13 @@ nav ul {
 }
 
 nav a {
-  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: #333;
+  font-weight: 400;
+  text-decoration: none;
   font-size: 0.95rem;
-  transition: color 0.3s ease;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease , border-bottom 0.3 ease;
 }
 
 nav a:hover {
