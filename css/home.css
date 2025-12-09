@@ -1,268 +1,35 @@
-/* ===== RESET ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Georgia", serif;
-  background-color: #fdfaf6;
-  color: #222;
-  line-height: 1.6;
-}
-
-/* ===== CABEÇALHO ===== */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 80px;
-}
-
-header .logo {
-  font-size: 1.6rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #222;
-  font-size: 1rem;
-  transition: 0.3s;
-}
-
-nav ul li a:hover {
-  color: #777;
-}
-
-/* ===== SEÇÃO PRINCIPAL ===== */
-main {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
-}
-
-/* ===== CARROSSEL ===== */
-.carrossel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  position: relative;
-  overflow: hidden;
-}
-
-.slides {
-  width: 90%;
-  max-width: 1000px;
-  aspect-ratio: 16 / 9;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  border-radius: 10px;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-/* ===== RODAPÉ ===== */
-footer {
-  text-align: center;
-  padding: 30px 0;
-  border-top: 1px solid #ddd;
-  color: #666;
-  font-size: 0.9rem;
-  margin-top: 60px;
-}/* ===== DEPOIMENTOS ===== */
-.depoimentos {
-  padding: 80px 20px;
-  background-color: #fdfaf6;
-  text-align: center;
-}
-
-.depoimentos h2 {
-  font-size: 2rem;
-  margin-bottom: 60px;
-  font-weight: 600;
-  color: #111;
-}
-
-.depoimento {
-  max-width: 700px;
-  margin: 0 auto 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.depoimento img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.depoimento p {
-  font-size: 1.1rem;
-  font-style: italic;
-  color: #444;
-  line-height: 1.6;
-  margin: 10px 0;
-  max-width: 600px;
-}
-
-.depoimento strong {
-  font-size: 1rem;
-  color: #000;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-}
-/* --- Botão de Feedback --- */
-.feedback-button {
-  text-align: center;
-  margin-top: -25px; /* aproxima o botão da frase */
-}
-
-.feedback-button a {
-  display: inline-block;
-  text-decoration: none;
-  background-color: #d6c2b5; /* bege suave, harmônico com o site */
-  color: #000;
-  padding: 10px 24px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-family: "Georgia", serif;
-  transition: all 0.3s ease;
-  border: 1px solid transparent;
-}
-
-.feedback-button a:hover {
-  background-color: #bba493; /* tom ligeiramente mais escuro ao passar o mouse */
-  border-color: #a38e7f;
-  transform: scale(1.05);
-}
-.home {
+/* --- HOME --- */
+#home {
   text-align: center;
   padding: 60px 0;
 }
 
-.home h2 {
+#home h2 {
   font-family: "Georgia", serif;
-  font-weight: 400;
+  font-size: 2rem;
   color: #222;
-  font-size: 1.8rem;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
 }
 
-/* Galeria horizontal */
-.galeria {
+/* --- GALERIA --- */
+.gallery {
   display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 0 40px;
-  scroll-behavior: smooth;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.galeria::-webkit-scrollbar {
-  height: 4px;
-}
-
-.galeria::-webkit-scrollbar-thumb {
-  background: #c1b5ab; /* bege elegante */
-  border-radius: 10px;
-}
-
-/* Cada foto */
-.foto {
-  flex: 0 0 auto;
-  scroll-snap-align: center;
-  text-decoration: none;
-  color: #000;
-  transition: transform 0.3s ease;
-}
-
-.foto img {
-  width: 280px;
-  height: 380px;
-  object-fit: cover;
+.gallery img {
+  width: 300px;
+  height: auto;
   border-radius: 8px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
-.foto span {
-  display: block;
-  margin-top: 10px;
-  font-size: 0.95rem;
-  color: #444;
-  font-family: "Georgia", serif;
-}
-
-.foto:hover img {
+.gallery img:hover {
   transform: scale(1.03);
-  opacity: 0.9;
-}
-.carousel {
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
-  anchor-name: --carousel;
-
-  columns: 1;
-  block-size: 10lh;
-  text-align: center;
-
-  &::column {
-    scroll-snap-align: center;
-  }
-}
-
-.carousel--scroll-markers {
-  scroll-marker-group: after;
-
-  &::scroll-marker-group {
-    position: fixed;
-    position-anchor: --carousel;
-    position-area: block-end;
-    position-visibility: always;
-    margin: 10px;
-
-    display: grid;
-    grid-auto-columns: 20px;
-    grid-auto-flow: column;
-    gap: 20px;
-  }
-
-  &::column::scroll-marker {
-    content: ' ';
-  }
-  &::column::scroll-marker:target-current {
-    background: var(--accent);
-  }
 }
